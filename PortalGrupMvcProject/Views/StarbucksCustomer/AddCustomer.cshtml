@@ -1,0 +1,26 @@
+﻿@model PortalGrupMvcProject.Models.Customer
+@{
+    Layout = null;
+}
+
+<h2>Starbucks Firması Kişi Ekleme Sayfası</h2>
+<br />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+@using (Html.BeginForm("AddCustomer", "StarbucksCustomer", FormMethod.Post))
+{
+    @Html.Label("Ad")
+    @Html.TextBoxFor(x => x.FirstName,new { @class = "form-control" });
+    <br />
+    @Html.Label("Soyad")
+    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" });
+    <br />
+    @Html.Label("Doğum Tarihi")
+    @Html.TextBoxFor(x => x.DateOfBirth, new { @class = "form-control" });
+    <br />
+    @Html.Label("Kimlik Numarası" )
+    @Html.TextBoxFor(x => x.NationalityId, new { @class = "form-control" });
+    <br />
+
+    <button class="btn btn-info">Kişi Ekle</button>
+}
+<!--Burada Starbucks Firmasına ait kişi ekleme sayfasının görünümü bulunmaktadır.-->
